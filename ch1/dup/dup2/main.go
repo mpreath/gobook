@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strconv"
 )
 
@@ -44,7 +45,7 @@ func countLines(f *os.File, counts map[string]map[string]int) {
 		if counts[input.Text()] == nil {
 			counts[input.Text()] = make(map[string]int)
 		}
-		counts[input.Text()][f.Name()]++
+		counts[input.Text()][filepath.Base(f.Name())]++
 	}
 	err := input.Err()
 	if err != nil {
