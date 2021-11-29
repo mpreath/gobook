@@ -36,4 +36,8 @@ func countLines(f *os.File, counts map[string]int) {
 	for input.Scan() {
 		counts[input.Text()]++
 	}
+	err := input.Err()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "dup2: %v\n", err)
+	}
 }
