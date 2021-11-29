@@ -1,0 +1,4 @@
+this is the first sentence of this input
+this is the second senetence of this input
+there are many sentences in this input, some are not duplicates
+there are many sentences in this input, some are duplicates
