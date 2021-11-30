@@ -1,2 +1,5 @@
 .vscode/
 *.gif
+*.old
+*/*/fetch
+*/*/lissajous
